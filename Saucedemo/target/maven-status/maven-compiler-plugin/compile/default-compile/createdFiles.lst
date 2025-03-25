@@ -1,0 +1,8 @@
+org\example\PomProducts.class
+org\example\PomLogin.class
+org\example\PomPayment.class
+Actions\ActionUI.class
+org\example\PomCart.class
+Actions\ActionsBroswer$Browsers.class
+Actions\ActionsBroswer.class
+org\example\PomCheckout.class
