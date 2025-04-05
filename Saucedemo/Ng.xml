@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="dummy suite" parallel="tests" thread-count="5">
+
+    <test name="E2E1">
+        <classes>
+            <class name="org.example.Testfile">
+                <methods>
+                    <include name="e2e_NormalUser"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="E2E2">
+        <classes>
+            <class name="org.example.Testfile">
+                <methods>
+                    <include name="e2e_PerformanceGlitch"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="E2E3">
+        <classes>
+            <class name="org.example.Testfile">
+                <methods>
+                    <include name="Locked_User_loginFail"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="E2E4">
+        <classes>
+            <class name="org.example.Testfile">
+                <methods>
+                    <include name="problemUserAddToCart"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="E2E5">
+        <classes>
+            <class name="org.example.Testfile">
+                <methods>
+                    <include name="problem_User_Checkout"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
