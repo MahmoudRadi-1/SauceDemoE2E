@@ -12,8 +12,8 @@ public class PomCart {
     protected String headerXpath="//div[@class=\"subheader\"]";
     private String checkoutXpath="//a[text()=\"CHECKOUT\"]";
 
-    public PomCart checkout(){
+    public PomCheckout checkout(){
         act.click(act.byXpath(checkoutXpath),act.byXpath(checkPage.header));
-        return this;
+        return checkPage;
     }
 }

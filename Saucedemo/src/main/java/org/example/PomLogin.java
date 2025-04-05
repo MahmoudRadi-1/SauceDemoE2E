@@ -36,14 +36,14 @@ public PomLogin navLoginPage(){
         act.enterText(act.byID(pwID), password);
         return this;
     }
-    public PomLogin clickLogin(){
+    public PomProducts clickLogin(){
 
         try {
             act.click(act.byID(loginBtnID),act.byXpath(prodpage.headerXpath));
         } catch (Exception e) {
             System.out.println("login Failed");
         }
-        return this;
+        return prodpage;
     }
 
 }

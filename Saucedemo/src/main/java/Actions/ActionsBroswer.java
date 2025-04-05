@@ -10,7 +10,9 @@ public class ActionsBroswer {
     public enum Browsers {
         chrome, firefox
     }
-
+    public static void windowMaximize(){
+        drivers.get().manage().window().maximize();
+    }
     public static void setDrivers(Browsers browser) {
         try {
             switch (browser) {
