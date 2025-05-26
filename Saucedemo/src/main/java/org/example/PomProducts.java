@@ -55,13 +55,7 @@ public class PomProducts {
         return prodName;
     }
 
-    private void sleep(int ms) {
-        try {
-            Thread.sleep(ms);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-    }
+
 
     public PomProducts addToCart(String item) {
         try {
@@ -96,10 +90,10 @@ public class PomProducts {
     public void viewCart() {
         act.click(act.byXpath(inCartXpath), act.byXpath(cartPage.headerXpath));
     }
-    public void clearThreadLocalData() {
+  /*  public void clearThreadLocalData() {
         ExpInCart.remove();
         actualInCart.remove();
         expCartTotal.remove();
         totalTemp.remove();
-    }
+    }*/
 }

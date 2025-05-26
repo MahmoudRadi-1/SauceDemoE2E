@@ -15,7 +15,7 @@ public class ActionUI {
     int waitTime=500;
 
     public ActionUI(){
-        this.driver = ActionsBroswer.drivers.get();
+        this.driver = ActionsBrowser.drivers.get();
     }
 
     public ActionUI nav(String url){
