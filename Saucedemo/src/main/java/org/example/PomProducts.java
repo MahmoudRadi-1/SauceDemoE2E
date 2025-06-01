@@ -2,6 +2,8 @@ package org.example;
 
 import Actions.ActionUI;
 
+import java.util.HashMap;
+
 public class PomProducts {
     public PomProducts(){
         act = new ActionUI();
@@ -24,7 +26,7 @@ public class PomProducts {
     private String getProductXpath(String prodName) {
         return "//div[@class='inventory_item_name' and text()='" + prodName + "']";
     }
-
+/*
     public String backPack() {
         prodName = "Sauce Labs Backpack";
         return prodName;
@@ -55,6 +57,31 @@ public class PomProducts {
         return prodName;
     }
 
+HashMap<String, String> prods = new HashMap<String, String>() {
+    {
+      put("backPack", "Sauce Labs Backpack");
+      put("bikeLight", "Sauce Labs Bike Light");
+      put("boltShirt", "Sauce Labs Bolt T-Shirt");
+      put("fleeceJacket", "Sauce Labs Fleece Jacket");
+      put("onesie", "Sauce Labs Onesie");
+      put("testAllShirt", "Test.allTheThings() T-Shirt (Red)");
+    }
+
+ */
+
+    private final String backPack = "Sauce Labs Backpack";
+    private final String bikeLight = "Sauce Labs Bike Light";
+    private final String boltShirt = "Sauce Labs Bolt T-Shirt";
+    private final String fleeceJacket = "Sauce Labs Fleece Jacket";
+    private final String onesie = "Sauce Labs Onesie";
+    private final String testAllShirt = "Test.allTheThings() T-Shirt (Red)";
+
+    public String BackPack() { return backPack; }
+    public String BikeLight() { return bikeLight; }
+    public String BoltShirt() { return boltShirt; }
+    public String FleeceJacket() { return fleeceJacket; }
+    public String Onesie() { return onesie; }
+    public String TestAllShirt() { return testAllShirt; }
 
 
     public PomProducts addToCart(String item) {
