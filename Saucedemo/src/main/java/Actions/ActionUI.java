@@ -52,7 +52,7 @@ public class ActionUI {
     }
 
     private WebElement waitForElementToBeClickable(By locator) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(0)); // Default timeout set to 10 seconds
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5)); // Default timeout set to 10 seconds
         return wait.until(ExpectedConditions.elementToBeClickable(locator));
     }
 

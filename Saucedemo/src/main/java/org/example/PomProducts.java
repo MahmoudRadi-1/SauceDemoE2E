@@ -5,10 +5,11 @@ import Actions.ActionUI;
 import java.util.HashMap;
 
 public class PomProducts {
-    public PomProducts(){
+    public PomProducts() {
         act = new ActionUI();
         cartPage = new PomCart();
     }
+
     private ActionUI act;
     private PomCart cartPage;
     private String prodName;
@@ -18,10 +19,10 @@ public class PomProducts {
     private String removeButton = "/ancestor::div[@class=\"inventory_item\"]//button[@class=\"btn_secondary btn_inventory\" and text()=\"REMOVE\"]";
     private String inCartXpath = "//span[@class=\"fa-layers-counter shopping_cart_badge\"]";
     private String priceXpath = "/ancestor::div[@class=\"inventory_item\"]//div[@class=\"inventory_item_price\"]";
-    ThreadLocal<Double> ExpInCart = ThreadLocal.withInitial(() -> 0.0);
-    ThreadLocal<Double> actualInCart = ThreadLocal.withInitial(() -> 0.0);
-    ThreadLocal<Double> expCartTotal = ThreadLocal.withInitial(() -> 0.0);
-    ThreadLocal<Double> totalTemp = ThreadLocal.withInitial(() -> 0.0);
+    public static ThreadLocal<Double> ExpInCart = ThreadLocal.withInitial(() -> 0.0);
+    public static ThreadLocal<Double> actualInCart = ThreadLocal.withInitial(() -> 0.0);
+    public static ThreadLocal<Double> expCartTotal = ThreadLocal.withInitial(() -> 0.0);
+    public static ThreadLocal<Double> totalTemp = ThreadLocal.withInitial(() -> 0.0);
 
     private String getProductXpath(String prodName) {
         return "//div[@class='inventory_item_name' and text()='" + prodName + "']";
@@ -76,12 +77,12 @@ HashMap<String, String> prods = new HashMap<String, String>() {
     private final String onesie = "Sauce Labs Onesie";
     private final String testAllShirt = "Test.allTheThings() T-Shirt (Red)";
 
-    public String BackPack() { return backPack; }
-    public String BikeLight() { return bikeLight; }
-    public String BoltShirt() { return boltShirt; }
-    public String FleeceJacket() { return fleeceJacket; }
-    public String Onesie() { return onesie; }
-    public String TestAllShirt() { return testAllShirt; }
+    public String BackPack() {return backPack;}
+    public String BikeLight() {return bikeLight;}
+    public String BoltShirt() {return boltShirt;}
+    public String FleeceJacket() {return fleeceJacket;}
+    public String Onesie() {return onesie;}
+    public String TestAllShirt() {return testAllShirt;}
 
 
     public PomProducts addToCart(String item) {
@@ -117,10 +118,12 @@ HashMap<String, String> prods = new HashMap<String, String>() {
     public void viewCart() {
         act.click(act.byXpath(inCartXpath), act.byXpath(cartPage.headerXpath));
     }
-  /*  public void clearThreadLocalData() {
+
+    public void clearThreadLocalData() {
         ExpInCart.remove();
         actualInCart.remove();
         expCartTotal.remove();
         totalTemp.remove();
-    }*/
+
+    }
 }
